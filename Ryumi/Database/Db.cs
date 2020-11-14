@@ -82,7 +82,8 @@ namespace Ryumi.Database
         {
             LoadUserInDb(userId);
 
-            return (int)(DateTime.Now - _users[userId].LastDaily).TotalDays > 0;
+            var lastDate = _users[userId].LastDaily;
+            return (int)(DateTime.Now - new DateTime(lastDate.Year, lastDate.Month, lastDate.Day)).TotalDays > 0;
         }
 
         public (string, int)[] GetInventory(ulong userId)
