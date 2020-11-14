@@ -1,0 +1,3 @@
+[submodule "Ryumi/Discord-Utils"]
+	path = Ryumi/Discord-Utils
+	url = https://github.com/Xwilarg/Discord-Utils
