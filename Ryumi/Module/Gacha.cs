@@ -16,8 +16,9 @@ namespace Ryumi.Module
             else
             {
                 await StaticObjects.Db.DoDaily(Context.User.Id);
-                await StaticObjects.Db.AddItem(Context.User.Id, ItemID.Scrap);
-                await ReplyAsync("You got a scrap.");
+                var item = StaticObjects.Rand.Next(0, 10) == 0 ? ItemID.GachaCoupon : ItemID.Scrap;
+                await StaticObjects.Db.AddItem(Context.User.Id, item);
+                await ReplyAsync("You got a " + item.ToString() + ".");
             }
         }
 

@@ -2,6 +2,7 @@
 {
     public enum ItemID
     {
-        Scrap
+        Scrap,
+        GachaCoupon
     }
 }
