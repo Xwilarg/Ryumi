@@ -62,7 +62,7 @@ namespace Ryumi.Database
             LoadUserInDb(userId);
 
             var user = _users[userId];
-            if ((DateTime.Now - user.LastDaily).TotalDays > 1) // We broke our streak (didn't do daily yesterday)
+            if ((int)(DateTime.Now - new DateTime(user.LastDaily.Year, user.LastDaily.Month, user.LastDaily.Day)).TotalDays > 1) // We broke our streak (didn't do daily yesterday)
             {
                 if (user.CurrentStreak > user.BestStreak) // Save best streak if we did better than last one
                     user.BestStreak = user.CurrentStreak;
