@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ryumi.Item;
+using System;
 using System.Collections.Generic;
 
 namespace Ryumi.Database

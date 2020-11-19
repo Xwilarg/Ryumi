@@ -1,5 +1,6 @@
 ﻿using RethinkDb.Driver;
 using RethinkDb.Driver.Net;
+using Ryumi.Item;
 using System;
 using System.Collections.Generic;
 using System.Linq;
