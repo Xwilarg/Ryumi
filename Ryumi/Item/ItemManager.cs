@@ -1,5 +1,4 @@
-﻿using Ryumi.Module;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace Ryumi.Item
@@ -19,9 +18,9 @@ namespace Ryumi.Item
             { ItemID.DarkGem, new Item("Dark Gem", "A totally normal and not evil gem.", true, Rarity.UltraRare) }
         };
 
-        public static Item GetItem(ItemID id)
+        public static Item GetItem(string name)
         {
-            return _allItems[id];
+            return _allItems[_allItems.Where(x => x.Key.ToString() == name).First().Key];
         }
 
         public static (ItemID, Item)[] GetDailyItems()

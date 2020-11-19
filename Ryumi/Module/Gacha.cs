@@ -42,7 +42,7 @@ namespace Ryumi.Module
             await ReplyAsync(embed: new EmbedBuilder
             {
                 Title = Context.User.Username + "'s inventory",
-                Description = string.Join("\n", StaticObjects.Db.GetInventory(Context.User.Id).Select(x => x.Item1 + " x" + x.Item2)),
+                Description = string.Join("\n", StaticObjects.Db.GetInventory(Context.User.Id).Select(x => "**" + x.Item1 + " x" + x.Item2 + ":** " + ItemManager.GetItem(x.Item1).Description)),
                 Color = Color.Blue
             }.Build());
         }
