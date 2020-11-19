@@ -2,12 +2,23 @@
 {
     public enum ItemID
     {
+        // Common
         Scrap,
         ElectricalComponent,
 
+        // Uncommon
         RefinedMetal,
         PrintedCircuit,
+        EmptyBottle,
         
-        GachaCoupon
+        // Rare
+        RedPaint,
+        BluePaint,
+
+        // Super Rare
+        GachaCoupon,
+
+        // Ultra Rare
+        DarkGem
     }
 }
